@@ -1,4 +1,4 @@
-import 'package:bloc_sample_app/MinimumBLoC.dart';
+import 'package:bloc_sample_app/minimum/Minimum.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 
@@ -33,7 +33,7 @@ class _RootPageState extends State<RootPage> {
               RaisedButton(
                 onPressed: () {
                   Navigator.push(context,
-                      CupertinoPageRoute(builder: (context) => MinimumBLoC()));
+                      CupertinoPageRoute(builder: (context) => MinimumStateless()));
                 },
                 child: Text("最小のBLoC"),
               )
