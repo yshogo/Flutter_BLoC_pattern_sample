@@ -1,3 +1,4 @@
+import 'package:bloc_sample_app/Schedule/Schedule.dart';
 import 'package:bloc_sample_app/minimum/Minimum.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
@@ -32,10 +33,22 @@ class _RootPageState extends State<RootPage> {
             children: <Widget>[
               RaisedButton(
                 onPressed: () {
-                  Navigator.push(context,
-                      CupertinoPageRoute(builder: (context) => MinimumStateless()));
+                  Navigator.push(
+                      context,
+                      CupertinoPageRoute(
+                          builder: (context) => MinimumStateless()));
                 },
                 child: Text("最小のBLoC"),
+              ),
+              SizedBox(height: 30.0,),
+              RaisedButton(
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      CupertinoPageRoute(
+                          builder: (context) => ScheduleStateless()));
+                },
+                child: Text("スケジュールBLoC"),
               )
             ],
           ),
