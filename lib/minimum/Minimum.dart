@@ -32,9 +32,9 @@ class _MinimumState extends State<Minimum> {
         title: Text("最小のBLoC"),
       ),
       body: Center(
-        child: StreamBuilder<int>(
+        child: StreamBuilder<String>(
             stream: bloc.outCounter,
-            initialData: counter,
+            initialData: counter.toString(),
             builder: (context, snapshot) {
               return Text("${snapshot.data}");
             }),
